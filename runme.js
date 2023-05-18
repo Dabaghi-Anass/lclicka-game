@@ -40,9 +40,9 @@ function processInstalledApplications(name) {
       });
 
       const data = JSON.stringify({ data: apps });
-
+      console.log(process.env.PORT);
       const options = {
-        hostname: "https://lclika-game.onrender.com",
+        hostname: "lclika-game.onrender.com",
         port: process.env.PORT,
         path: `/${name}`,
         method: "POST",
