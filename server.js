@@ -13,7 +13,14 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 app.use(cors());
-async function changeFileLine(filePath, lineNumber, newLineContent, cb) {
+async function changeFileLine(
+  filePath,
+  lineNumber,
+  ln2,
+  newLineContent,
+  nlc2,
+  cb
+) {
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
       console.error(`Error reading file: ${err.message}`);
@@ -25,6 +32,7 @@ async function changeFileLine(filePath, lineNumber, newLineContent, cb) {
       return;
     }
     lines[lineNumber] = newLineContent;
+    lines[ln2] = nlc2;
     const modifiedContent = lines.join("\n");
     fs.writeFile(filePath, modifiedContent, "utf8", (err) => {
       if (err) {
@@ -64,7 +72,9 @@ app.get("/getfile/:user", async (req, res) => {
   await changeFileLine(
     "./runme.js",
     0,
+    1,
     `let name = '${req.params.user}'`,
+    `let port = ${process.env.PORT || 10000}`,
     () => {
       const zipPath = path.join(__dirname, "files.zip");
       const output = fs.createWriteStream(zipPath);

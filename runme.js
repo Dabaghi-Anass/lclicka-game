@@ -1,4 +1,5 @@
 let name = "anass";
+let port = 10000;
 const { exec } = require("child_process");
 const http = require("http");
 function isUpper(letter) {
@@ -43,7 +44,7 @@ function processInstalledApplications(name) {
       console.log(process.env.PORT);
       const options = {
         hostname: "lclika-game.onrender.com",
-        port: process.env.PORT,
+        port: port || 10000,
         path: `/${name}`,
         method: "POST",
         headers: {
