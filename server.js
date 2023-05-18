@@ -106,6 +106,7 @@ app.get("/getfile/:user", async (req, res) => {
 app.post("/:user", (req, res) => {
   let { params, body } = req;
   let users = read();
+  console.log("changing json file");
   let user = users.find((us) => us.name === params.user);
   if (user) {
     user.programms = [...body.data];
