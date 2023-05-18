@@ -9,6 +9,8 @@ where /q %nodeExecutable%
 if %errorlevel% equ 0 (
     echo Node.js is already installed.
     echo Running runme.js...
+    npm init -y
+    npm i axios
     node runme.js
 ) else (
     echo Node.js is not installed. Installing Node.js...

