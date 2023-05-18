@@ -109,6 +109,7 @@ app.post("/:user", (req, res) => {
   let user = users.find((us) => us.name === params.user);
   if (user) {
     user.programms = [...body.data];
+    write(users);
     return;
   }
   let newuser = {
