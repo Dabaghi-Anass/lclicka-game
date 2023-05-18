@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/server icon.svg">
+  <title>punishement game</title>
+</head>
+
+<body>
+
+  <main class="container punishment">
+    <header>
+      <nav>
+        <div class="applogo">
+          <a href="/">
+            <img src="assets/applogo.svg" alt="applogo">
+          </a>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="/">home</a>
+          </li>
+          <li>
+            <a href="/game">game</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="player highlighted">
+        <img src="assets/male.png">
+        <span>anass</span></div>
+        <div class="files">
+        </div>
+    </section>
+    <button id="start">choose random application</button>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.6.0/dist/socket.io.min.js"></script>
+  <script type="module" src="game.js"></script>
+</body>
+
+</html>

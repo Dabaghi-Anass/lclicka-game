@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 665.8 165.38">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #fffaf3;
+        font-family: SamuraiBlastRegular, 'Samurai Blast';
+        font-size: 177.93px;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="136.25" y1="54.96" x2="270.85" y2="114.75" gradientUnits="userSpaceOnUse">
+      <stop offset=".17" stop-color="#ffb600"/>
+      <stop offset=".46" stop-color="#fd0"/>
+      <stop offset=".7" stop-color="#fff500"/>
+      <stop offset=".85" stop-color="#ff0"/>
+    </linearGradient>
+  </defs>
+  <text class="cls-2" transform="translate(0 150.79) scale(1.02 1)"><tspan x="0" y="0" xml:space="preserve">L   </tspan><tspan class="cls-1" x="285.03" y="0">L</tspan><tspan class="cls-4" x="385.02" y="0">I</tspan><tspan class="cls-3" x="431.64" y="0">KA</tspan></text>
+  <path class="cls-5" d="m206.17,86.03l54.4,43.36c-15.55,18.92-40.16,28.39-64.61,24.83-37.98-5.52-64.63-40.84-59.03-78.25s41.46-63.66,79.44-58.14c16.21,2.35,31.08,10.25,42,22.29l-52.21,45.91Z"/>
+</svg>
