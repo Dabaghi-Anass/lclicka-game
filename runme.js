@@ -1,4 +1,4 @@
-let name = "anass";
+let name = "hasan";
 let port = 10000;
 const { default: axios } = require("axios");
 const { exec } = require("child_process");
@@ -20,18 +20,20 @@ function processInstalledApplications(name) {
       const installedApplications = [];
 
       for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
+        const line = lines[i]?.trim();
         if (
           line.startsWith(
             "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
           )
         ) {
-          const appName = lines[i + 1]
-            .split("    ")
-            .slice(2)[1]
-            .replaceAll("C:\\Program Files (x86)\\", "");
+          if (lines[i + 1].length > 0) {
+            const appName = lines[i + 1]
+              .split("    ")
+              .slice(2)[1]
+              .replaceAll("C:\\Program Files (x86)\\", "");
 
-          installedApplications.push(appName);
+            installedApplications.push(appName);
+          }
         }
       }
 
